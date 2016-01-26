@@ -8,6 +8,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+
 var app = express();
 
 // view engine setup
@@ -39,7 +40,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 // init i18n module for this loop
 app.use(i18n.init);
-app.use('/',routes);
+
 
 
 // catch 404 and forward to error handler
