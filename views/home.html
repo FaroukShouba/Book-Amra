@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" ng-app="mofed" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>الموفد</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap-rtl.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/animate.min.css">
+  <link rel="stylesheet" href="/css/angular-toggle-switch-bootstrap-3.css">
+  <link rel="stylesheet" href="/css/nya-bs-select.min.css">
+  <link rel="stylesheet" href="/css/angular-ui-notification.min.css">
+  <link rel="stylesheet" href="/css/angular-block-ui.min.css">
+  <link rel="stylesheet" href="/css/userStyle.css">
+</head>
+<body class="animated fadeIn">
+  <nav class="navbar navbar-findcond navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/user">الموفد</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="dropdown navbar-right">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%=name%> <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <!-- <li><a href="#">الملف الشخصي</a></li> -->
+              <!-- <li class="divider"></li> -->
+              <li><a href="/user/logout">خروج</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br />
+  <div class="container" ng-controller="JobCtl">
+    <div class="row">
+      <div class="col-xs-12 col-lg-2">
+        <ul class="nav nav-pills nav-stacked list-group" auto-active>
+          <li><a href="#/" class="list-group-item"><i class="fa fa-home fa-fw"></i>بيانات الطالب</a></li>
+          <li><a href="#/recruit" ng-click="getJobInfo()" class="list-group-item" ng-hide="verify != 3"><i class="fa fa-pencil-square-o fa-fw"></i>العاملين بالدولة</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-10">
+        <div ng-view></div>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <footer class="footer">
+    <div class="container">
+      <div class="row text-muted">
+        <div class="col-xs-12 col-lg-6">
+          <a href="http://naga.ly" target="_blank">صــمم وطــوِّر بواسطة © شركة ناقه للحلول التقنية 2015</a>
+          <br/>
+          <a href="http://libyanspider.com" target="_blank">تمـت اﻹستضافة بواسطة © شركة العنكبوت الليبي 2015</a>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+          <a href="http://naga.ly" target="_blank">
+            <img src="/img/NagaLogo.png" class="img-responsive pull-left naga-logo" alt="Responsive image">
+          </a>
+          <a href="http://libyanspider.com" target="_blank">
+            <img src="/img/LibyanSpiderLogo.png" class="img-responsive pull-left spider-logo" alt="Responsive image">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/jquery-2.1.4.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/angular-1.4.7/angular.min.js"></script>
+  <script src="/js/angular-1.4.7/angular-route.min.js"></script>
+  <script src="/js/angular-ui-notification/angular-ui-notification.min.js"></script>
+  <script src="/js/ng-remote-validate/ngRemoteValidate.js"></script>
+  <script src="/js/angular-toggle-switch/angular-toggle-switch.min.js"></script>
+  <script src="/js/nya-bootstrap-select/nya-bs-select.min.js"></script>
+  <script src="/js/angular-ui-bootstrap/ui-bootstrap-tpls-0.14.3.min.js"></script>
+  <script src="/js/angular-block-ui/angular-block-ui.min.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>
